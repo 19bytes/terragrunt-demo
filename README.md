@@ -11,7 +11,7 @@ brew install hashicorp/tap/terraform
 ```
 2. Im Hetzner Projekt einen API Key erzeugen
 3. API Key in einer lokalen *.tfvars hinterlegen
-4. Optional: Einen SSH-Key in der Hetzner Cloud hinterlegen und diesen im Server unter `ssh-keys = [] referenzieren`.
+4. Optional: Einen SSH-Key in der Hetzner Cloud hinterlegen und diesen im Server unter `ssh-keys = [] ` referenzieren.
 ```
 tf init
 tf plan -vars-file=<oben erzeugte>.tfvars
