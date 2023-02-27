@@ -4,6 +4,13 @@ terraform {
       source = "hetznercloud/hcloud"
     }
   }
+
+    backend "azurerm" {
+    resource_group_name  = "terragruntdemo-rg"
+    storage_account_name = "terragruntdemostoracc"
+    container_name       = "terragruntdemostorcon"
+    key                  = "terraform.tfstate"
+  }
 }
 resource "hcloud_server" "node1" {
   name        = "node1"
