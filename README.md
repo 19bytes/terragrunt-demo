@@ -10,15 +10,15 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 ```
 2. Im Hetzner Projekt einen API Key erzeugen
-3. API als `hcloud_token`  Key in einer lokalen *.tfvars hinterlegen
+3. API als `hcloud_token`  Key in einer lokalen terraform.tfvars hinterlegen
 ```
 hcloud_token="iChBiNDeInCl0uDTok3N"
 ```
 4. Optional: Einen SSH-Key in der Hetzner Cloud hinterlegen und diesen im Server unter `ssh-keys = [] ` referenzieren.
 ```
 tf init
-tf plan -vars-file=<oben erzeugte>.tfvars
-tf apply -vars-file=<oben erzeugte>.tfvars
+tf plan 
+tf apply 
 ```
 Es sollte nun ein Server "node1" im Rechenzentrum Nürnberg erzuegt worden sein. 
 ### Linksammlung 
