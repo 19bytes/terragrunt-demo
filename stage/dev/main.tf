@@ -5,15 +5,15 @@ terraform {
     }
   }
 
-    backend "azurerm" {
-    resource_group_name  = "terragruntdemo-rg"
-    storage_account_name = "terragruntdemostoracc"
-    container_name       = "terragruntdemostorcon"
-    key                  = "terraform.tfstate"
-  }
+  # backend "azurerm" {
+  #   resource_group_name  = "terragruntdemo-rg"
+  #   storage_account_name = "terragruntdemostoracc"
+  #   container_name       = "terragruntdemostorcon"
+  #   key                  = "terraform.tfstate"
+  # }
 }
-resource "hcloud_server" "node1" {
-  name        = "node1"
+resource "hcloud_server" "dev_node" {
+  name        = "dev-node"
   image       = "ubuntu-22.04"
   server_type = "cx11"
   # pre configured in hetzner ui right now
