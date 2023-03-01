@@ -1,10 +1,10 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-    }
-  }
-}
+# terraform {
+#   required_providers {
+#     azurerm = {
+#       source = "hashicorp/azurerm"
+#     }
+#   }
+# }
 
 # tags for repeated usage
 locals {

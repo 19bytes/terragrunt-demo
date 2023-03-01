@@ -2,10 +2,10 @@ resource "hcloud_placement_group" "placement_group" {
   name = var.placement_group
   type = var.placement_group_type
 }
-resource "hcloud_server" "dev_node" {
-  name        = "dev-node"
+resource "hcloud_server" "qa_node" {
+  name        = "qa-node"
   image       = "ubuntu-22.04"
-  server_type = "cx11"
+  server_type = "cx21"
   placement_group_id = hcloud_placement_group.placement_group.id
   # pre configured in hetzner ui right now
   ssh_keys = ["julian", "stefan"]

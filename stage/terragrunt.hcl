@@ -11,3 +11,27 @@ remote_state {
         key                  = "${path_relative_to_include()}/terraform.tfstate"
     }
 }
+
+
+
+generate "provider" {
+    path = "provider.tf"
+    if_exists = "overwrite_terragrunt"
+    contents = <<EOF
+terraform {
+    required_providers {
+        hcloud = {
+            source = "hetznercloud/hcloud"
+        }
+    }
+}
+
+variable "hcloud_token" {
+    default = ""
+    sensitive = true
+}
+provider "hcloud" {
+    token = var.hcloud_token
+}
+        EOF
+}

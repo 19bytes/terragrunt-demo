@@ -1,7 +1,28 @@
 # terragrunt-demo
 Hier finden wir den Code für unsere Blog Reihe über Terragrunt
 
-## Notepad
+## Start with terragrunt
+1. Alle module deployen
+```
+cd stage
+terragrunt plan-all
+terragrunt apply-all
+```
+2. Einzelne Module deployen
+```
+cd stage/module
+terragrunt plan
+terragrunt apply
+```
+Beispiel dev Stage:
+``
+cd stage/dev
+terragrunt plan
+terragrunt apply 
+``
+
+
+## Notepad before 2023-03-01
 ### Steps 
 1. Terraform installieren 
 ```
