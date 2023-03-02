@@ -1,5 +1,9 @@
 # terragrunt-demo
-Hier finden wir den Code für unsere Blog Reihe über Terragrunt
+Hier finden wir den Code für unsere Blog Reihe über Terragrunt.
+
+In diesem Repository werden die Module (Terraform Code) verwaltet.
+
+Infrastructure (Terragrunt) Repository: [Terragrunt Code](https://github.com/19bytes/terragrunt-demo-infrastructure)
 
 ## Start with terragrunt
 1. Alle module deployen
