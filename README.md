@@ -5,6 +5,19 @@ In diesem Repository werden die Module (Terraform Code) verwaltet.
 
 Infrastructure (Terragrunt) Repository: [Terragrunt Code](https://github.com/19bytes/terragrunt-demo-infrastructure)
 
+## Einrichtung des Remote-Backends
+### Azure
+Voraussetzung: Installierte az-cli.
+
+Der User der in der az-cli eingeloggt ist benötigt die entsprechenden Berechtigungen um auf den Azure Blob-Storage zuzugreifen.
+
+```
+# Im Terminal
+az login 
+```
+Dann wird man zur Login-Seite des Azure Portals geleitet, dort wird der Login mit dem entsprechenden Nutzer durgeführt.
+
+Danach kann man das Remote Backenend entweder mit terraform (s.u.) einrichten oder lässt dies mit terragrunt automatisch einrichten.
 ## Start with terragrunt
 1. Alle module deployen
 ```
