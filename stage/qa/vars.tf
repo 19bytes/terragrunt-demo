@@ -7,3 +7,8 @@ variable "placement_group_type" {
   type = string
   description = "Spread is the only option here"
 }
+
+variable "server_type" {
+  type = string
+  description = "Server type to use."
+}
