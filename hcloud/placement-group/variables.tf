@@ -2,6 +2,11 @@ variable "environment" {
   description = "The nick name identifying the type of environment (i.e. test, staging, production)"
 }
 
+variable "placement_group_type" {
+  description = "The type of the placement group."
+  default = "spread"
+}
+
 variable "placement_group_name_prefix" {
   description = "The prefix used to name all resources created."
 }

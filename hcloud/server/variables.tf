@@ -15,7 +15,7 @@ variable "server_location" {
   description = "The location where the virtual machine should be created at."
 }
 
-variable "server_environment" {
+variable "environment" {
   description = "The nick name identifying the type of environment (i.e. test, staging, production)"
 }
 
