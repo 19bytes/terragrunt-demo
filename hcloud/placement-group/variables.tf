@@ -14,5 +14,5 @@ variable "placement_group_name_suffix" {
 locals {
   # Define resource names based on the following convention:
   # {azurerm_resource_name_prefix}-RESOURCE_TYPE-{environment}
-  hcloud_placement_group_name = "${var.placement_group_name_prefix}-${var.environment}${var.placement_group_name_suffix != "" ? "-${var.placement_group_name_suffix}-" : "-"}rg"
+  hcloud_placement_group_name = "${var.placement_group_name_prefix}-${var.environment}${var.placement_group_name_suffix != "" ? "-${var.placement_group_name_suffix}-" : "-"}pg"
 }
