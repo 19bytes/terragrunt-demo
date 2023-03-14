@@ -3,7 +3,7 @@ data "hcloud_placement_group" "pg" {
 }
 
 resource "hcloud_server" "vm" {
-  name        = var.server_name
+  name        = "${var.server_name}-${var.environment}"
   image       = var.server_image
   server_type = var.server_type
   placement_group_id = data.hcloud_placement_group.pg.id
