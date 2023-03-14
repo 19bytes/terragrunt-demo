@@ -1,12 +1,8 @@
-data "hcloud_placement_group" "pg" {
-  name = var.server_placement_group
-}
-
 resource "hcloud_server" "vm" {
   name        = "${var.server_name}-${var.environment}"
   image       = var.server_image
   server_type = var.server_type
-  placement_group_id = data.hcloud_placement_group.pg.id
+  placement_group_id = var.server_placement_group_id
   # pre configured in hetzner ui right now
   ssh_keys = ["julian", "stefan"]
   location = var.server_location

@@ -19,6 +19,6 @@ variable "environment" {
   description = "The nick name identifying the type of environment (i.e. test, staging, production)"
 }
 
-variable "server_placement_group" {
-  description = "The prefix used to name all resources created."
+variable "server_placement_group_id" {
+  description = "Placement Group ID the server added to on creation."
 }
